@@ -1,0 +1,19 @@
+{
+  "name": "copy-github-issue",
+  "description": "copy-github-issue",
+  "version": "1.0",
+  "manifest_version": 3,
+  "permissions": ["activeTab", "scripting"],
+  "action": {
+    "name": "Copy GitHub Issue"
+  },
+  "background": {
+    "service_worker": "icon-clicked.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://github.com/*"],
+      "js": ["content-script.js"]
+    }
+  ]
+}
